@@ -1,6 +1,7 @@
 import 'package:WomenShopUi/Models/Products.dart';
 import 'package:WomenShopUi/compnants/Categoris.dart';
 import 'package:WomenShopUi/compnants/ItemCard.dart';
+import 'package:WomenShopUi/screens/produitDetail/Detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -29,6 +30,12 @@ class Body extends StatelessWidget {
                   crossAxisSpacing: 20),
               itemBuilder: (context, index) => ItemCard(
                 product: products[index],
+                press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailsScreen(
+                              product: products[index],
+                            ))),
               ),
             ),
           ),
