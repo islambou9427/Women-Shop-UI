@@ -7,6 +7,8 @@ class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: product.color,
+    );
   }
 }
