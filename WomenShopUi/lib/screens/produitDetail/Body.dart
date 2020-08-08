@@ -31,8 +31,30 @@ class Body extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('oikljpomlkqfijk,qzklej,d')
+                              Text(
+                                'Color',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 15),
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  DotColor(color: Colors.blueAccent),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  DotColor(color: Colors.blueGrey),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  DotColor(color: Colors.cyan),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  DotColor(color: Colors.red),
+                                ],
+                              )
                             ],
                           )
                         ],
@@ -46,6 +68,28 @@ class Body extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class DotColor extends StatelessWidget {
+  final Color color;
+  const DotColor({
+    Key key,
+    this.color,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 5),
+      padding: EdgeInsets.all(2),
+      height: 24,
+      width: 24,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle, border: Border.all(color: color)),
+      child: DecoratedBox(
+          decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
     );
   }
 }
