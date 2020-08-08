@@ -23,16 +23,15 @@ class DetailsScreen extends StatelessWidget {
       backgroundColor: product.color,
       elevation: 0,
       leading: IconButton(
-        icon: SvgPicture.asset('WomenShopUi/assets/icons/back.svg'),
+        icon: SvgPicture.asset('assets/icons/back.svg'),
         onPressed: () => Navigator.pop(context),
       ),
       actions: <Widget>[
         IconButton(
-            icon: SvgPicture.asset('WomenShopUi/assets/icons/search.svg'),
+            icon: SvgPicture.asset('assets/icons/search.svg'),
             onPressed: () {}),
         IconButton(
-            icon: SvgPicture.asset('WomenShopUi/assets/icons/cart.svg'),
-            onPressed: () {}),
+            icon: SvgPicture.asset('assets/icons/cart.svg'), onPressed: () {}),
         SizedBox(
           width: 10,
         )
